@@ -35,7 +35,7 @@
 
                 <fragment
                     android:id="@+id/fragmentGraph"
-                    android:name="com.anteastra.goodstrader.gui.GraphFragment"
+                    android:name="com.anteastra.goodstrader.gui.fragments.GraphFragment"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     tools:layout="@layout/fragment_graph" />
@@ -49,7 +49,7 @@
 
                 <fragment
                     android:id="@+id/fragmentTimeControl"
-                    android:name="com.anteastra.goodstrader.gui.TimeControlFragment"
+                    android:name="com.anteastra.goodstrader.gui.fragments.TimeControlFragment"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     tools:layout="@layout/fragment_timecontrol" />
@@ -80,7 +80,7 @@
 
             <fragment
                 android:id="@+id/fragmentControl"
-                android:name="com.anteastra.goodstrader.gui.ControlFragment"
+                android:name="com.anteastra.goodstrader.gui.fragments.ControlFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:layout="@layout/fragment_control" />

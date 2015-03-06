@@ -4,9 +4,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import com.anteastra.goodstrader.activitylisteners.OnMoneyChangeListener;
-import com.anteastra.goodstrader.gui.ControlFragment;
-import com.anteastra.goodstrader.gui.TimeControlFragment;
-import com.anteastra.goodstrader.gui.GraphFragment;
+import com.anteastra.goodstrader.gui.fragments.ControlFragment;
+import com.anteastra.goodstrader.gui.fragments.TimeControlFragment;
+import com.anteastra.goodstrader.gui.fragments.GraphFragment;
+import com.anteastra.goodstrader.model.GameStateSingleton;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;

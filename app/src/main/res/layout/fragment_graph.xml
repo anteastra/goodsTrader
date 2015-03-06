@@ -102,7 +102,7 @@
         <SurfaceView
             android:id="@+id/surfaceViewMain"
             android:layout_width="fill_parent"
-            android:layout_height="100dp" />
+            android:layout_height="@dimen/graph_heigth" />
 
     </LinearLayout>
 
