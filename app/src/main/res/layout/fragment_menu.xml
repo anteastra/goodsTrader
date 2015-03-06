@@ -1,0 +1,59 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MenuActivity$PlaceholderFragment"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/start_menu_title"
+        android:id="@+id/textView"
+        android:layout_gravity="center_horizontal" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/start_menu_leftright_dimension"
+        android:layout_marginRight="@dimen/start_menu_leftright_dimension">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/start_button_title"
+            android:id="@+id/buttonNewGame"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/menu_button"
+            android:layout_margin="10dp"
+            style="@style/button_text"
+            android:elegantTextHeight="false" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/highscores_button_title"
+            android:id="@+id/buttonHighscores"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/menu_button"
+            android:layout_margin="10dp"
+            style="@style/button_text"/>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/exit_button_title"
+            android:id="@+id/buttonExit"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/menu_button"
+            android:layout_margin="10dp"
+            style="@style/button_text"/>
+    </LinearLayout>
+
+</LinearLayout>
