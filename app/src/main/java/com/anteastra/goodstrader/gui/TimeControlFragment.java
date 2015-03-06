@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Button;
 
@@ -38,28 +39,28 @@ public class TimeControlFragment extends Fragment{
     }
 	
 	private void initButtons() {
-		((Button)rootView.findViewById(R.id.buttonSpeed0)).setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				GameStateSingleton.getInstance().gameSpeed = GameStateSingleton.getInstance().SPEED_0;
-				updateViews();
-			}
-		});
-		((Button)rootView.findViewById(R.id.buttonSpeed1)).setOnClickListener(new OnClickListener() {
+		((ImageButton)rootView.findViewById(R.id.buttonSpeed0)).setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GameStateSingleton.getInstance().gameSpeed = GameStateSingleton.getInstance().SPEED_0;
+                updateViews();
+            }
+        });
+		((ImageButton)rootView.findViewById(R.id.buttonSpeed1)).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				GameStateSingleton.getInstance().gameSpeed = GameStateSingleton.getInstance().SPEED_1;
 				updateViews();
 			}
 		});
-		((Button)rootView.findViewById(R.id.buttonSpeed2)).setOnClickListener(new OnClickListener() {
+		((ImageButton)rootView.findViewById(R.id.buttonSpeed2)).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				GameStateSingleton.getInstance().gameSpeed = GameStateSingleton.getInstance().SPEED_2;
 				updateViews();
 			}
 		});
-		((Button)rootView.findViewById(R.id.buttonSpeed3)).setOnClickListener(new OnClickListener() {
+		((ImageButton)rootView.findViewById(R.id.buttonSpeed3)).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				GameStateSingleton.getInstance().gameSpeed = GameStateSingleton.getInstance().SPEED_3;
