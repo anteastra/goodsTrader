@@ -3,7 +3,6 @@ package com.anteastra.goodstrader;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import com.anteastra.goodstrader.activitylisteners.OnMoneyChangeListener;
 import com.anteastra.goodstrader.gui.fragments.ControlFragment;
 import com.anteastra.goodstrader.gui.fragments.TimeControlFragment;
 import com.anteastra.goodstrader.gui.fragments.GraphFragment;
@@ -13,7 +12,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
 
-public class GameActivity extends FragmentActivity implements OnMoneyChangeListener {
+public class GameActivity extends FragmentActivity {
 	
 	
 	private Timer mainTimer;
@@ -51,11 +50,7 @@ public class GameActivity extends FragmentActivity implements OnMoneyChangeListe
 
 		@Override
 		public void run() {
-			GraphFragment fragment = (GraphFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentGraph);
-			if (fragment != null) {
-				fragment.updateViews();
-			}
-			
+
 			TimeControlFragment fragmentTime = (TimeControlFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentTimeControl);
 			if (fragmentTime != null) {
 				fragmentTime.updateViews();
@@ -83,13 +78,4 @@ public class GameActivity extends FragmentActivity implements OnMoneyChangeListe
 		}
 		
 	}
-
-	@Override
-	public void onMoneyChange() {
-		GraphFragment fragment = (GraphFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentGraph);
-		if (fragment != null) {
-			fragment.updateViews();
-		}
-	}	
-	
 }
