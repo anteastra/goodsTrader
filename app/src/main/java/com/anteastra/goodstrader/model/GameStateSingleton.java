@@ -9,21 +9,13 @@ import android.content.Context;
 
 public class GameStateSingleton {
 
-    private static Object syncObject = new Object();
-    private static GameStateSingleton instance = null;
-    private static Context context;
+    private static GameStateSingleton instance = new GameStateSingleton();
 
     private GameStateSingleton() {
-
+        initialGeneratePrice();
     }
 
     public static GameStateSingleton getInstance() {
-        if (instance == null) {
-            synchronized (syncObject) {
-                instance = new GameStateSingleton();
-                instance.initialState();
-            }
-        }
         return instance;
     }
 
@@ -64,10 +56,6 @@ public class GameStateSingleton {
 
     {
         calendarInstance.setTime(gameDate);
-    }
-
-    public static void setContext(Context con) {
-        context = con;
     }
 
     public void nextDay() {
@@ -130,10 +118,6 @@ public class GameStateSingleton {
         for (int i = 0; i < periodsCount; i++) {
             generatePrice();
         }
-    }
-
-    private void initialState() {
-        initialGeneratePrice();
     }
 
     public int getTodayBuyPrice() {
