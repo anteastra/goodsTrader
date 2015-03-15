@@ -1,7 +1,6 @@
 package com.anteastra.goodstrader;
 
 import java.util.Timer;
-import java.util.TimerTask;
 
 import com.anteastra.goodstrader.model.GameStateSingleton;
 import com.anteastra.goodstrader.multithread.MainTimerTask;
@@ -44,6 +43,7 @@ public class GameActivity extends FragmentActivity {
         super.onSaveInstanceState(outState);
     }
 
+    @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
     }

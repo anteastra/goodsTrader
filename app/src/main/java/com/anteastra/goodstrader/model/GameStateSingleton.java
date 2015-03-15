@@ -10,6 +10,7 @@ import android.content.Context;
 public class GameStateSingleton {
 
     private static GameStateSingleton instance = new GameStateSingleton();
+    private long graphFPS;
 
     private GameStateSingleton() {
         initialGeneratePrice();
@@ -206,5 +207,13 @@ public class GameStateSingleton {
 
     public String getCurrentDate() {
         return DATE_FORMAT.format(gameDate);
+    }
+
+    public void setGraphFPS(long graphFPS) {
+        this.graphFPS = graphFPS;
+    }
+
+    public long getGraphFPS() {
+        return graphFPS;
     }
 }
